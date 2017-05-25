@@ -38,6 +38,10 @@ def reeds_shepp_path_planning(start_x, start_y, start_yaw,
     ys = [q[1] for q in qs]
     yaw = [q[2] for q in qs]
 
+    xs.append(end_x)
+    ys.append(end_y)
+    yaw.append(end_yaw)
+
     clen = reeds_shepp.path_length(q0, q1, curvature)
     pathtypeTuple = reeds_shepp.path_type(q0, q1, curvature)
 
@@ -57,9 +61,9 @@ if __name__ == '__main__':
     print("Reeds Shepp path planner sample start!!")
     import matplotlib.pyplot as plt
 
-    start_x = 1.0  # [m]
+    start_x = 10.0  # [m]
     start_y = 1.0  # [m]
-    start_yaw = math.radians(0.0)  # [rad]
+    start_yaw = math.radians(180.0)  # [rad]
 
     end_x = -0.0  # [m]
     end_y = -3.0  # [m]
@@ -76,8 +80,8 @@ if __name__ == '__main__':
     plot_arrow(start_x, start_y, start_yaw)
     plot_arrow(end_x, end_y, end_yaw)
 
-    for (ix, iy, iyaw) in zip(px, py, pyaw):
-        plot_arrow(ix, iy, iyaw, fc="b")
+    #  for (ix, iy, iyaw) in zip(px, py, pyaw):
+    #  plot_arrow(ix, iy, iyaw, fc="b")
     #  print(clen)
 
     plt.legend()
