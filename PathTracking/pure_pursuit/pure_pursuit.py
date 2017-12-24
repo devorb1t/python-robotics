@@ -2,7 +2,7 @@
 
 Path tracking simulation with pure pursuit steering control and PID speed control.
 
-author: Atsushi Sakai
+author: Atsushi Sakai (@Atsushi_twi)
 
 """
 import numpy as np
@@ -13,7 +13,7 @@ k = 0.1  # look forward gain
 Lfc = 1.0  # look-ahead distance
 Kp = 1.0  # speed propotional gain
 dt = 0.1  # [s]
-L = 2.9  # [m] Tread of vehicle
+L = 2.9  # [m] wheel base of vehicle
 
 
 show_animation = True
