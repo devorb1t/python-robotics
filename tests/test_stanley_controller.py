@@ -5,7 +5,7 @@ sys.path.append("./PathTracking/stanley_controller/")
 
 from PathTracking.stanley_controller import stanley_controller as m
 
-print("stanley controller test")
+print(__file__)
 
 
 class Test(TestCase):
