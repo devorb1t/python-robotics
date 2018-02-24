@@ -1,10 +1,6 @@
 from unittest import TestCase
 
-import sys
-sys.path.append("./PathPlanning/ClosedLoopRRTStar/")
-sys.path.append("./PathPlanning/ReedsSheppPath/")
-
-from PathPlanning.ClosedLoopRRTStar import closed_loop_rrt_star_car as m
+from SLAM.iterative_closest_point import iterative_closest_point as m
 
 print(__file__)
 
