@@ -45,7 +45,7 @@ class Particle:
         self.lmP = np.matrix(np.zeros((N_LM * LM_SIZE, LM_SIZE)))
 
 
-def fast_slam(particles, u, z):
+def fast_slam1(particles, u, z):
 
     particles = predict_particles(particles, u)
 
@@ -370,7 +370,7 @@ def main():
 
         xTrue, z, xDR, ud = observation(xTrue, xDR, u, RFID)
 
-        particles = fast_slam(particles, ud, z)
+        particles = fast_slam1(particles, ud, z)
 
         xEst = calc_final_state(particles)
 
